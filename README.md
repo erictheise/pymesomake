@@ -45,8 +45,21 @@ python pymesomake/pymesomake.py --sourcefile='data/genesis.txt' --mesostring="th
 ```
 
 
-### Acknowledgements
+### Acknowledgements & Resources
 
 Andrew Culver
-Vatican
-Marjorie Perloff
+
+* [post to silence mailing list](https://lists.virginia.edu/sympa/arc/silence/2019-01/msg00013.html) that inspired this code
+* compilation of [computer programs used by John Cage](http://www.anarchicharmony.org/People/Culver/CagePrograms.html)
+  
+The Holy See
+
+* [source of Genesis text](http://www.vatican.va/archive/bible/genesis/documents/bible_genesis_en.html). HTML source subjected to these minimal edits:
+    * removal of page navigation elements
+    * removal of chapter headings (e.g., "Chapter 6") and line numbering (e.g., "[1:30]")
+    
+    
+Marjorie Perloff contextual essays
+
+* [John Cage Conceptualist Poet](http://thebatterseareview.com/critical-prose/116-john-cage-conceptualist-poet)
+* [The Music of Verbal Space: John Cage’s “What You Say”](http://marjorieperloff.com/essays/cage-verbal-space/)
