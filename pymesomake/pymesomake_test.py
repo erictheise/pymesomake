@@ -1,4 +1,4 @@
-from .pymesomake import is_mesoword, is_wingword, Mesoword, Poemline
+from .__main__ import is_mesoword, is_wingword, Mesoword, Poemline
 import pytest
 
 
