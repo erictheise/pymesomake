@@ -40,7 +40,7 @@ $
 ```
 ### Usage
 
-```python
+```
 python pymesomake/pymesomake.py --sourcefile='data/genesis.txt' --mesostring="these are the times that try men's souls"
 ```
 
