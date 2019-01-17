@@ -41,9 +41,18 @@ $
 ### Usage
 
 ```
-python pymesomake/pymesomake.py --sourcefile='data/genesis.txt' --mesostring="these are the times that try men's souls"
+python pymesomake --sourcefile='data/genesis.txt' --mesostring="these are the times that try men's souls"
 ```
 
+
+### Reminder to Maintainer
+
+Publish thusly:
+
+```
+$ python3 setup.py sdist bdist_wheel
+$ twine updload dist/*
+```
 
 ### Acknowledgements & Resources
 
