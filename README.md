@@ -38,10 +38,11 @@ You should see a mesostic on your screen. Congratulations.
 
 ### MacOS
 
+_coming soon_
 
 ### Linux
 
-
+_coming soon_
 
 
 ## Usage
