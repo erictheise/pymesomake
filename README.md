@@ -3,13 +3,13 @@
 PyMesomake is a Python 3 implementation of the mesostic generation algorithm Andrew Culver developed for John Cage.
 
 
-### Installation
+## Installation
 
-#### Windows
+### Windows
 
 I only use Windows for testing in my projects but these instructions work for me on a vanilla Windows 10 VirtualBox virtual machine:
 
-0. If you don't already have Python on your system download and install the current release from python.org}(https://www.python.org/). 
+0. If you don't already have Python on your system download and install the current release from [python.org](https://www.python.org/). 
 
 1. Open a Command Prompt.
  
@@ -24,7 +24,7 @@ pip install pymesomake
 ```
 python -m nltk.downloader punkt
 ```
-4. Download [the file containing the text of Genesis](https://raw.githubusercontent.com/erictheise/pymesomake/master/data/genesis.txt).
+4. Download [this file, containing the text of Genesis](https://raw.githubusercontent.com/erictheise/pymesomake/master/data/genesis.txt).
 
 
 5. Run this command, making sure to provide the correct path to the downloaded Genesis text.
@@ -36,22 +36,22 @@ python -m pymesomake --sourcefile=Downloads\genesis.txt --mesostring="these are 
 You should see a mesostic on your screen. Congratulations.
 
 
-#### MacOS
+### MacOS
 
 
-#### Linux
+### Linux
 
 
 
 
-### Usage
+## Usage
 
 ```
 python pymesomake --sourcefile='data/genesis.txt' --mesostring="these are the times that try men's souls"
 ```
 
 
-### Reminder to Maintainer
+## Reminder to Maintainer
 
 Publish thusly:
 
@@ -60,7 +60,7 @@ $ python setup.py sdist bdist_wheel
 $ twine upload dist/*
 ```
 
-### Acknowledgements & Resources
+## Acknowledgements & Resources
 
 Andrew Culver
 
