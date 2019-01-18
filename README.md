@@ -19,7 +19,7 @@ I only use Windows for testing in my projects but these instructions work for me
 pip install pymesomake
 ```
 
-3. Download the `punkt` tokenizer from Python's Natural Language Tool Kit
+3. Download the `punkt` tokenizer from Python's Natural Language Tool Kit.
 
 ```
 python -m nltk.downloader punkt
