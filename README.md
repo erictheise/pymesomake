@@ -57,8 +57,8 @@ python pymesomake --sourcefile='data/genesis.txt' --mesostring="these are the ti
 Publish thusly:
 
 ```
-$ python setup.py sdist bdist_wheel
-$ twine upload dist/*
+python setup.py sdist bdist_wheel
+twine upload dist/*
 ```
 
 ## Acknowledgements & Resources
