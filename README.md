@@ -51,16 +51,6 @@ _coming soon_
 python pymesomake --sourcefile='data/genesis.txt' --mesostring="these are the times that try men's souls"
 ```
 
-
-## Reminder to Maintainer
-
-Publish thusly:
-
-```
-python setup.py sdist bdist_wheel
-twine upload dist/*
-```
-
 ## Acknowledgements & Resources
 
 Andrew Culver
@@ -79,3 +69,12 @@ Marjorie Perloff contextual essays
 
 * [John Cage Conceptualist Poet](http://thebatterseareview.com/critical-prose/116-john-cage-conceptualist-poet)
 * [The Music of Verbal Space: John Cage’s “What You Say”](http://marjorieperloff.com/essays/cage-verbal-space/)
+
+## Reminder to Maintainer
+
+Publish thusly:
+
+```
+python setup.py sdist bdist_wheel
+twine upload dist/*
+```
