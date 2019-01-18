@@ -5,39 +5,45 @@ PyMesomake is a Python 3 implementation of the mesostic generation algorithm And
 
 ### Installation
 
-Unless you've previously used Python's Natural Language Tool Kit you'll see this error on your first run of `PyMesomake`.
+#### Windows
+
+I only use Windows for testing in my projects but these instructions work for me on a vanilla Windows 10 VirtualBox virtual machine:
+
+0. If you don't already have Python on your system download and install the current release from python.org}(https://www.python.org/). 
+
+1. Open a Command Prompt.
+ 
+2. Run this command.
+
+```python
+pip install pymesomake
+```
+
+3. Download the `punkt` tokenizer from Python's Natural Language Tool Kit
 
 ```
-LookupError: 
-**********************************************************************
-  Resource punkt not found.
-  Please use the NLTK Downloader to obtain the resource:
+python -m nltk.downloader punkt
+```
+4. Download [the file containing the text of Genesis](https://raw.githubusercontent.com/erictheise/pymesomake/master/data/genesis.txt).
 
-  >>> import nltk
-  >>> nltk.download('punkt')
-  
-  Attempted to load tokenizers/punkt/PY3/english.pickle
 
-  Searched in:
-    - '/Users/erictheise/nltk_data'
-    - '/Users/erictheise/Repos/erictheise/venvs/pymesomake/nltk_data'
-    - '/Users/erictheise/Repos/erictheise/venvs/pymesomake/share/nltk_data'
-    - '/Users/erictheise/Repos/erictheise/venvs/pymesomake/lib/nltk_data'
-    - '/usr/share/nltk_data'
-    - '/usr/local/share/nltk_data'
-    - '/usr/lib/nltk_data'
-    - '/usr/local/lib/nltk_data'
-    - ''
-**********************************************************************
+5. Run this command, making sure to provide the correct path to the downloaded Genesis text.
+
 ```
-You can download that component with:
+python -m pymesomake --sourcefile=Downloads\genesis.txt --mesostring="these are the times that try men's souls"
 ```
-$ python -m nltk.downloader punkt
-[nltk_data] Downloading package punkt to
-[nltk_data]     /Users/erictheise/nltk_data...
-[nltk_data]   Unzipping tokenizers/punkt.zip.
-$
-```
+
+You should see a mesostic on your screen. Congratulations.
+
+
+#### MacOS
+
+
+#### Linux
+
+
+
+
 ### Usage
 
 ```
@@ -50,8 +56,8 @@ python pymesomake --sourcefile='data/genesis.txt' --mesostring="these are the ti
 Publish thusly:
 
 ```
-$ python3 setup.py sdist bdist_wheel
-$ twine updload dist/*
+$ python setup.py sdist bdist_wheel
+$ twine upload dist/*
 ```
 
 ### Acknowledgements & Resources
