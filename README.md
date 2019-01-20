@@ -15,7 +15,7 @@ I only use Windows for testing in my projects but these instructions work for me
  
 2. Run this command.
 
-```python
+```
 pip install pymesomake
 ```
 
@@ -24,10 +24,11 @@ pip install pymesomake
 ```
 python -m nltk.downloader punkt
 ```
+
 4. Download [this file, containing the text of Genesis](https://raw.githubusercontent.com/erictheise/pymesomake/master/data/genesis.txt).
 
 
-5. Run this command, making sure to provide the correct path to the downloaded Genesis text.
+5. Run this command, making sure to provide the correct path to wherever you've downloaded the Genesis text.
 
 ```
 python -m pymesomake --sourcefile=Downloads\genesis.txt --mesostring="these are the times that try men's souls"
@@ -36,9 +37,36 @@ python -m pymesomake --sourcefile=Downloads\genesis.txt --mesostring="these are 
 You should see a mesostic on your screen. Congratulations.
 
 
-### MacOS
+### macOS
 
-_coming soon_
+I do most of my development work on Macintosh hardware so my setup is somewhat customized. If you've done any programming on your Mac it's likely you've already installed `Xcode`, [the `homebrew` package manager](https://brew.sh/`), and maybe a version of Python 3.
+
+0. Install a current release of Python 3 on your Mac. [This guide](https://docs.python-guide.org/starting/install3/osx/) is as good as any.
+
+1. Open a Terminal window.
+
+2. Run this command.
+
+```
+pip install pymesomake
+```
+
+3. Download the `punkt` tokenizer from Python's Natural Language Tool Kit.
+
+```
+python -m nltk.downloader punkt
+```
+
+4. Download [this file, containing the text of Genesis](https://raw.githubusercontent.com/erictheise/pymesomake/master/data/genesis.txt).
+
+5. Run this command, making sure to provide the correct path to wherever you've downloaded the Genesis text.
+
+```
+python -m pymesomake --sourcefile=~/Downloads/genesis.txt --mesostring="these are the times that try men's souls"
+```
+
+You should see a mesostic on your screen. Congratulations.
+
 
 ### Linux
 
