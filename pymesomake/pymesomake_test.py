@@ -83,19 +83,19 @@ class TestIsWingword(object):
 
 class TestPoemline(object):
     def test_assemble_mesoword_line(self):
-        mesoword = Mesoword('a', 'b', 'prepared', 4, 1, 2)
+        mesoword = Mesoword('a', 'b', 'prepared', 4, 1, 2, False)
         poemline = Poemline(mesoword)
         assert poemline.assemble() == 'prepAred'
 
     def test_assemble_mesoword_line_with_left_wing(self):
-        mesoword = Mesoword('a', 'b', 'prepared', 4, 1, 2)
+        mesoword = Mesoword('a', 'b', 'prepared', 4, 1, 2, False)
         poemline = Poemline(mesoword)
         poemline.prepend('arbitrary')
         poemline.prepend('barbary')
         assert poemline.assemble() == 'barbary arbitrary prepAred'
 
     def test_assemble_mesoword_line_with_right_wing(self):
-        mesoword = Mesoword('a', 'b', 'prepared', 4, 1, 2)
+        mesoword = Mesoword('a', 'b', 'prepared', 4, 1, 2, False)
         poemline = Poemline(mesoword)
         poemline.append('arbitrary')
         poemline.append('barbary')

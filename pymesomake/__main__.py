@@ -58,6 +58,8 @@ def print_poem(l_array):
         for i in range(max_offset - (len(l.left_wing) + l.mesoword.spine_index)):
             print(' ', end='')
         print(l.assemble())
+        if l.mesoword.space_follows:
+            print()
 
 
 class Poemline:
@@ -84,13 +86,14 @@ class Poemline:
 
 class Mesoword:
     """Mesowords are identified from supplied texts using rules."""
-    def __init__(self, first, second, word, spine_index, mesostring_index, sourcetext_index):
+    def __init__(self, first, second, word, spine_index, mesostring_index, sourcetext_index, space_follows):
         self.first = first
         self.second = second
         self.word = ''.join([word[:spine_index], word[spine_index].upper(), word[spine_index + 1:]])
         self.spine_index = spine_index
         self.mesostring_index = mesostring_index
         self.sourcetext_index = sourcetext_index
+        self.space_follows = space_follows
 
 
 @click.command()
@@ -101,13 +104,20 @@ def mesosticize(sourcefile, mesostring, rule):
     """An implementation of the mesostic generation algorithm Andrew Culver developed for John Cage."""
     with open(sourcefile, 'r') as f:
         sourcetext = word_tokenize(remove_punctuation(f.read()).casefold())
-    mesostring = remove_punctuation(mesostring).replace(' ','').casefold()
+    mesostring = remove_punctuation(mesostring).casefold()
 
     k = 0
     mesowords = []
     for i, first in enumerate(mesostring):
+        space_follows = False
+        if mesostring[i].isspace():
+            continue
         try:
-            second = mesostring[i+1]
+            if not mesostring[i+1].isspace():
+                second = mesostring[i+1]
+            else:
+                second = mesostring[i + 2]
+                space_follows = True
         except:
             second = ''
         if rule == 100:
@@ -121,7 +131,7 @@ def mesosticize(sourcefile, mesostring, rule):
             for j in range(k, len(sourcetext)):
                 accept, spine_index = is_mesoword(sourcetext[j], first, second)
                 if accept:
-                    mesowords.append(Mesoword(first, second, sourcetext[j], spine_index, i, j))
+                    mesowords.append(Mesoword(first, second, sourcetext[j], spine_index, i, j, space_follows))
                     k = j + 1
                     break
 
