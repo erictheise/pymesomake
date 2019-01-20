@@ -62,7 +62,7 @@ python -m nltk.downloader punkt
 5. Run this command, making sure to provide the correct path to wherever you've downloaded the Genesis text.
 
 ```
-python -m pymesomake --sourcefile=~/Downloads/genesis.txt --mesostring="these are the times that try men's souls"
+python -m pymesomake --sourcefile=Downloads/genesis.txt --mesostring="these are the times that try men's souls"
 ```
 
 You should see a mesostic on your screen. Congratulations.
