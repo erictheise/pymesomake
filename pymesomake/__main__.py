@@ -96,15 +96,7 @@ class Mesoword:
         self.space_follows = space_follows
 
 
-@click.command()
-@click.option('--sourcefile', prompt='file containing source text')
-@click.option('--mesostring', prompt='Mesostic spine, surrounded by quotes')
-@click.option('--rule', prompt='rule, 50 or 100', default=50)
-def mesosticize(sourcefile, mesostring, rule):
-    """An implementation of the mesostic generation algorithm Andrew Culver developed for John Cage."""
-    with open(sourcefile, 'r') as f:
-        sourcetext = word_tokenize(remove_punctuation(f.read()).casefold())
-    mesostring = remove_punctuation(mesostring).casefold()
+def mesosticize(sourcetext, mesostring, rule):
 
     k = 0
     mesowords = []
@@ -160,5 +152,19 @@ def mesosticize(sourcefile, mesostring, rule):
 
     print_poem(lines)
 
+
+@click.command()
+@click.option('--sourcefile', prompt='file containing source text')
+@click.option('--mesostring', prompt='Mesostic spine, surrounded by quotes')
+@click.option('--rule', prompt='rule, 50 or 100', default=50)
+def click_wrapper(sourcefile, mesostring, rule):
+    """An implementation of the mesostic generation algorithm Andrew Culver developed for John Cage."""
+    with open(sourcefile, 'r') as f:
+        sourcetext = word_tokenize(remove_punctuation(f.read()).casefold())
+    mesostring = remove_punctuation(mesostring).casefold()
+
+    mesosticize(sourcetext, mesostring, rule)
+
+
 if __name__ == '__main__':
-  mesosticize()
+  click_wrapper()
