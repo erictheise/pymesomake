@@ -58,6 +58,8 @@ def build_poem(l_array):
         for i in range(max_offset - (len(l.left_wing) + l.mesoword.spine_index)):
             poem += ' '
         poem += l.assemble() + '\n'
+        if l.mesoword.space_follows:
+            poem += '\n'
 
     return poem
 
@@ -99,7 +101,7 @@ class Mesoword:
 def mesosticize(sourcetext, mesostring, rule):
     """An implementation of the mesostic generation algorithm Andrew Culver developed for John Cage."""
     sourcetext = word_tokenize(remove_punctuation(sourcetext).casefold())
-    mesostring = remove_punctuation(mesostring).replace(' ','').casefold()
+    mesostring = remove_punctuation(mesostring).casefold()
 
     k = 0
     mesowords = []
