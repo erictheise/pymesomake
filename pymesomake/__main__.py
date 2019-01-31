@@ -10,7 +10,7 @@ def click_wrapper(sourcefile, mesostring, rule):
     """A command line wrapper for PyMesomake."""
     with open(sourcefile, 'r') as f:
         sourcetext = f.read()
-    mesosticize(sourcetext, mesostring, rule)
+    print(mesosticize(sourcetext, mesostring, rule))
 
 
 if __name__ == '__main__':

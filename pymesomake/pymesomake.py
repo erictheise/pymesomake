@@ -45,18 +45,21 @@ def print_mesowords(m_array):
         print(m.word)
 
 
-def print_poem(l_array):
+def build_poem(l_array):
     max_offset = 0
     margin = 4
     for l in l_array:
         if len(l.left_wing) + l.mesoword.spine_index > max_offset:
             max_offset = len(l.left_wing) + l.mesoword.spine_index
+    poem = ''
     for l in l_array:
         for i in range(margin):
-            print(' ', end='')
+            poem += ' '
         for i in range(max_offset - (len(l.left_wing) + l.mesoword.spine_index)):
-            print(' ', end='')
-        print(l.assemble())
+            poem += ' '
+        poem += l.assemble() + '\n'
+
+    return poem
 
 
 class Poemline:
@@ -150,4 +153,4 @@ def mesosticize(sourcetext, mesostring, rule):
                     break
         lines[i] = line
 
-    print_poem(lines)
+    return build_poem(lines)
