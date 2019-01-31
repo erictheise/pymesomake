@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pymesomake",
-    version="0.3.3",
+    version="0.4.0",
     author="Eric Theise",
     author_email="erictheise@gmail.com",
     description="An implementation of the mesostic generation algorithm Andrew Culver developed for John Cage.",
