@@ -4,7 +4,7 @@ Click==7.0
 more-itertools==5.0.0
 nltk==3.4
 pluggy==0.8.1
-py==1.7.0
+py==1.10.0
 pytest==4.1.1
 singledispatch==3.4.0.3
 six==1.12.0
